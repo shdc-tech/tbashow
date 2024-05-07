@@ -1,0 +1,7 @@
+total 24
+drwxr-xr-x 5 tba tba 4096 May  8 08:39 .
+drwxr-xr-x 7 tba tba 4096 May  8 08:59 ..
+drwxr-xr-x 2 tba tba 4096 Nov 17 13:51 cache
+-rw-r--r-- 1 tba tba    2 May  8 08:39 cacheIndex.json
+drwxr-xr-x 2 tba tba 4096 Dec 18 09:26 local
+drwxr-xr-x 2 tba tba 4096 Nov 17 13:51 staging

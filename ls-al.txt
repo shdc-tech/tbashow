@@ -1,0 +1,18 @@
+total 352
+drwxr-xr-x 7 tba tba   4096 May  8 08:57 .
+drwxr-xr-x 3 tba tba   4096 Nov  8 16:39 ..
+-rw-r--r-- 1 tba tba    333 Nov 17 13:48 config3.json
+drwxr-xr-x 5 tba tba   4096 May  8 08:39 east
+drwxr-xr-x 7 tba tba   4096 May  8 08:56 .git
+-rw-r--r-- 1 tba tba     49 May  8 08:55 .gitignore
+-rw-r--r-- 1 tba tba  10884 Dec  5 07:55 ImageSet.py
+-rw-r--r-- 1 tba tba  10885 Dec  4 14:58 ImageSet.py~
+drwxr-xr-x 5 tba tba   4096 May  8 08:39 lesson1
+drwxr-xr-x 5 tba tba   4096 May  8 08:39 lesson2
+-rw-r--r-- 1 tba tba      0 May  8 08:57 ls-al.txt
+drwxr-xr-x 2 tba tba   4096 Dec  5 07:56 __pycache__
+-rw-r--r-- 1 tba tba  10661 Dec  4 14:40 SlideShow-03.py
+-rw-r--r-- 1 tba tba  10661 Dec  4 14:40 SlideShow-03.py~
+-rw-r--r-- 1 tba tba 103892 Nov 26 10:41 Splash 3 1920x1080.png
+-rw-r--r-- 1 tba tba 157412 Nov 12 20:43 splash.png
+-rw-r--r-- 1 tba tba   4421 Nov  9 15:32 WiringTest2.py
