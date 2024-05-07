@@ -1,0 +1,23 @@
+{
+	"displayIntervalMS" : 60000,
+	"displaySize" : [3840, 2160],
+	"logLevel" : 0,
+	"imageSets" : [
+		{
+			"name" : "east",
+			"randomise" : "Y",
+			"auto" : "Y",
+			"refreshMins" : 20
+		},
+		{
+			"name" : "lesson1",
+			"auto" : "N",
+			"refreshMins" : 20
+		},
+		{
+			"name" : "lesson2",
+			"auto" : "N",
+			"refreshMins" : 20
+		}
+	]
+}

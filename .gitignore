@@ -1,0 +1,10 @@
+*.png
+*.py~
+
+__pycache__
+
+east
+lesson1
+lesson2
+
+
