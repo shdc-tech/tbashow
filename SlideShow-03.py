@@ -98,9 +98,14 @@ defaultConfig = {
 	CK_DISPLAY_SIZE 	: [1600, 900]
 }
 
+# Note: Passing None as the URL root sets the image sets to simple/manual mode
+# 		To opeerate in web based refresh mode use something like:
+#	CK_SET_URL 			: "http://tasbridge.com.au/pics/",
+
+
 defaultSetConfig = {
 	CK_SET_NAME 		: "slides",
-	CK_SET_URL 			: "http://tasbridge.com.au/pics/",
+	CK_SET_URL 			: None,
 	CK_SET_RANDOMISE 	: "N",
 	CK_SET_AUTO			: "Y",
 	CK_SET_REFRESH_MINS : 20

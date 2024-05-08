@@ -2,6 +2,8 @@
 A class to manage a local repository of images loaded from a changing web repository
 
 Copyright 2023, John Grosvenor
+
+Modified April 2024 to support a simpler mode of operation without we updates
 '''
 
 import random
@@ -34,7 +36,11 @@ class ImageSet:
 	A class to manage a local repository of images loaded from a changing web repository
 	Static local content can also be incorporated.
 	All files are stored under a subdirectory with the name of the set.
-	Within this directory there should be
+	Within this directory there should be cache, local and staging
+
+	NOTE: If the image set is initialised with no URL it will act as a purely manual
+	repository. No attempt will be made to refresh the images. Images will be managed
+	manually and stored in teh local sub directory only.
 	'''
 
 	def __init__(
@@ -61,6 +67,14 @@ class ImageSet:
 		self.refreshMins = refreshMins
 		self.setUpDirs()
 
+
+	@property
+	def simpleMode(self):
+		return self.urlRoot is None
+
+	@property
+	def webMode(self):
+		return self.urlRoot is not None
 
 	@property
 	def rootDir(self):
@@ -103,6 +117,11 @@ class ImageSet:
 		Returns a list of file paths or names in the directory which match the suffixes
 		Returns either the full path (default), or just the file name (fullPath=False)
 		'''
+
+		if self.simpleMode and path != self.localDir:
+			# ignore contents of all but the local dir in simple mode
+			return []
+
 		files = []
 		# NB "os.scandir ... The entries are yielded in arbitrary order"
 		with os.scandir(path) as entries:
@@ -130,6 +149,10 @@ class ImageSet:
 		New or updated images are downloaded to the staging directory and then copied to the cache
 		Updates are identified using the cache index. If no cache index is found all images are treated as new
 		'''
+
+		if self.simpleMode:
+			self.refreshImageNames()
+			return
 
 		if not connected():
 			print("WARNING - Unable to update images, no network connection")
